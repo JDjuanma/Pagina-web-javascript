@@ -1,0 +1,81 @@
+/* Juan Manuel Díaz - N° 327538 */
+
+body {
+  margin: 0;
+}
+
+section {
+  padding: 10px;
+  background-color: #ddf4d6;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  text-align: left;
+}
+
+article {
+  background-color: rgb(138, 255, 140);
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f1f4d6;
+  border-radius: 10px;
+}
+
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="button"],
+form select,
+form button {
+  width: 200px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  display: block;
+}
+
+#idConsulta {
+  width: 70px;
+  display: block;
+}
+
+input[type="radio"] {
+  margin-right: 15px;
+}
+
+label {
+  margin-right: 15px;
+}
+
+.corredor-elite {
+    background-color: #e00204;
+}
+
+.img-corredores {
+  width: 300px;
+  height: 200px;
+}

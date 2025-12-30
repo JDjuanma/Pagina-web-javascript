@@ -1,0 +1,200 @@
+<!-- Juan Manuel Díaz - N° 327538 -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obligatorio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/funciones.js"></script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>Sitio de Corredores</h1>
+            <img src="img/Corredores%20de%20Uruguay.png" alt="Imagen de Corredores" class="img-corredores">
+            <nav id="idMenu">
+                <input type="button" id="idDatos" value="Datos">
+                <input type="button" id="idEstadisticas" value="Estadísticas">
+            </nav>
+        </header>
+
+        <main>
+            <section id="idSectionDatos">
+                <h2>Datos</h2>
+                <article>
+                    <form id="idFormCarreras">
+                        <h3>Carreras</h3>
+                        <label for="idCarrera">Nombre:</label>
+                        <input type="text" id="idCarrera" required>
+                        <label for="idDepartamentos">Departamento:</label>
+                        <select id="idDepartamentos">
+                            <option value="Montevideo">Montevideo</option>
+                            <option value="Canelones">Canelones</option>
+                            <option value="Maldonado">Maldonado</option>
+                            <option value="Rocha">Rocha</option>
+                            <option value="Treinta y Tres">Treinta y Tres</option>
+                            <option value="Cerro Largo">Cerro Largo</option>
+                            <option value="Rivera">Rivera</option>
+                            <option value="Artigas">Artigas</option>
+                            <option value="Salto">Salto</option>
+                            <option value="Paysandú">Paysandú</option>
+                            <option value="Rio Negro">Rio Negro</option>
+                            <option value="Soriano">Soriano</option>
+                            <option value="Colonia">Colonia</option>
+                            <option value="San José">San José</option>
+                            <option value="Flores">Flores</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Lavalleja">Lavalleja</option>
+                            <option value="Durazno">Durazno</option>
+                            <option value="Tacuarembó">Tacuarembó</option>
+                        </select>
+                        <label for="idFecha">Fecha:</label>
+                        <input type="date" id="idFecha">
+
+                        <label for="idCupo">Cupo: </label>
+                        <input type="number" id="idCupo" min="1" max="1000" value="30">
+                        <input type="button" id="idBotonAgregarCarrera" value="Agregar Carrera">
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Patrocinadores</h3>
+                    <form id="idFormPatrocinadores">
+                        <label for="idPatrocinador">Nombre: </label>
+                        <input type="text" id="idPatrocinador" required>
+
+                        <label for="idRubro">Rubro: </label>
+                        <select id="idRubro">
+                            <option value="alimenticio">Alimenticio</option>
+                            <option value="banco">Banco</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="farmacia">Farmacia</option>
+                            <option value="ropa deportiva">Ropa deportiva</option>
+                            <option value="estatal">Estatal</option>
+                            <option value="general">General</option>
+                        </select>
+
+                        <label for="idPatrocinadorCarreras">Carreras:</label>
+                        <select id="idPatrocinadorCarreras" multiple size="4">
+                        </select>
+
+                        <input type="button" id="idBotonAgregarPatrocinador" value="Agregar/Actualizar Patrocinador">
+                    </form>
+                </article>
+                <article>
+                    <h3>Corredores</h3>
+                    <form id="idFormCorredores">
+                        <label for="idNombre">Nombre: </label>
+                        <input type="text" id="idNombre" required>
+
+                        <label for="idEdad">Edad: </label>
+                        <input type="text" id="idEdad" required>
+
+                        <label for="idCedula">Cédula: </label>
+                        <input type="text" id="idCedula" required>
+
+                        <label for="idFicha">Fecha de vencimiento de ficha médica: </label>
+                        <input type="date" id="idFicha" required>
+
+                        <div class="deportistas">
+                            <label>Tipo de corredor: </label>
+
+                            <input type="radio" id="idTipoElite" name="Corredores" value="Deportista de élite">
+                            <label for="idTipoElite">Deportista de élite</label>
+
+                            <input type="radio" id="idTipoComun" name="Corredores" value="Deportista comun" checked>
+                            <label for="idTipoComun">Deportista común</label>
+                        </div>
+
+                        <input type="button" id="idAgregar" value="Agregar Corredor">
+
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Inscripciones</h3>
+                    <form id="idFormInscripciones">
+                        <label for="idCorredores">Corredores:</label>
+                        <select id="idCorredores"></select>
+
+                        <label for="idCarreras">Carreras:</label>
+                        <select id="idCarreras"></select>
+
+                        <input type="button" id="idInscripcion" value="Inscribir">
+                    </form>
+                </article>
+            </section>
+
+            <section id="idSectionEstadisticas">
+                <h2>Estadísticas</h2>
+                <article>
+                    <h3>Datos generales</h3>
+                    <p>Promedio de inscriptos por carrera: <span id="idPromedio">sin datos</span></p>
+                    <p>Carrera/s con más inscriptos:</p>
+                    <ul id="idCarrerasMasInscriptos">
+                        <li>Sin datos</li>
+                    </ul>
+                    <p>Carreras sin inscriptos ordenadas por fecha:</p>
+                    <ul id="idCarrerasSinInscriptos">
+                        <li>Sin datos</li>
+                    </ul>
+                    <p>Porcentaje de corredores de élite: <span id="idPorcentajeElite">sin datos</span></p>
+                    <h3>Consulta inscriptos</h3> <label for="idConsulta">Carrera: </label>
+                    <select id="idConsulta">
+                    </select>
+
+                    <label>Ordenar por:</label>
+                    <input type="radio" name="Ordenar" id="idpersona" value="Nombre" checked>
+                    <label for="idpersona">Nombre</label>
+
+                    <input type="radio" name="Ordenar" id="idNumero" value="Numero">
+                    <label for="idNumero">Numero</label>
+
+                    <table id="idtabla">
+                        <caption>Inscriptos</caption>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Edad</th>
+                                <th>Cédula</th>
+                                <th>Ficha médica</th>
+                                <th>Número</th>
+                            </tr>
+                        </thead>
+                        <tbody id="idTabla">
+                        </tbody>
+                    </table>
+                </article>
+
+                <article id="idMapa">
+                    <h3>Visualizar Mapa:</h3>
+                    <input type="radio" id="idMapaCarreras" name="Mapa" value="Por carreras" checked>
+                    <label for="idMapaCarreras">Por carreras</label> <input type="radio" id="idMapaInscripciones"
+                        name="Mapa" value="Por patrocinadores">
+                    <label for="idMapaInscripciones">Por Inscripciones</label>
+                    <div id="mapContainer"></div>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Programación 1 - Obligatorio 1er semestre 2025 - Autores:</p>
+            <p>Grupo M1A - Juan Manuel Díaz .... (Número 327538) -
+                <a href="https://www.ort.edu.uy" target="_blank">Link</a>
+            </p>
+            <p>Grupo M1A - Franco Díaz .... (Número 357834) -
+                <a href="https://www.ort.edu.uy" target="_blank">Link</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

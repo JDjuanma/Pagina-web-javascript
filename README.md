@@ -21,4 +21,5 @@ Abrir `Index.html` en un navegador moderno.
 
 ## 👤 Autor
 Juan Manuel Díaz Yannone
+
 Universidad ORT Uruguay – Facultad de Ingeniería

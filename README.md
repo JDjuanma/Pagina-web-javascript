@@ -4,22 +4,22 @@
 Este proyecto corresponde al primer obligatorio de Programación 1. 
 Se desarrolla una página web interactiva utilizando HTML, CSS y JavaScript.
 
-## 🚀 Tecnologías
+## Tecnologías
 - HTML5
 - CSS3
 - JavaScript (clases, funciones, DOM)
 
-## 📂 Estructura
+## Estructura
 - `Index.html` → página principal
 - `css/` → estilos
 - `js/` → clases y funciones
 - `img/` → imágenes
 - `Documento.pdf` → documento asociado
 
-## ▶️ Ejecución
+## Ejecución
 Abrir `Index.html` en un navegador moderno.
 
-## 👤 Autor
+## Autor
 Juan Manuel Díaz Yannone
 
 Universidad ORT Uruguay – Facultad de Ingeniería
